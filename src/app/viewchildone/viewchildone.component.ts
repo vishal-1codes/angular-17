@@ -1,5 +1,6 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit, ViewChild, effect } from '@angular/core';
 import { ViewchildtwoComponent } from '../viewchildtwo/viewchildtwo.component';
+import { GlobalService } from '../services/global.service';
 @Component({
   selector: 'app-viewchildone',
   templateUrl: './viewchildone.component.html',
@@ -8,16 +9,17 @@ import { ViewchildtwoComponent } from '../viewchildtwo/viewchildtwo.component';
 export class ViewchildoneComponent implements OnInit{
   @ViewChild(ViewchildtwoComponent) childComponentData !: ViewchildtwoComponent;
   
-  constructor(){
-
+  constructor(private globalService:GlobalService){
+    
   }
 
   ngOnInit(): void {
-   
+ 
   }
 
   passData(){
     this.childComponentData.receivedData = "Data passed from parent";
   }
 
+ 
 }

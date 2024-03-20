@@ -1,0 +1,15 @@
+<p>signalone works!</p>
+
+<input #inputField placeholder="name">
+<button (click)="updateSignal(inputField.value)">Update Signal</button>
+
+
+<button (click)="increaseCount()">Increase</button>
+<h5>{{displayCount}}</h5>
+<button (click)="decreaseCount()">Decrease</button>
+
+<input placeholder="value one" (keyup)="valueOne($event)">
+<input placeholder="value two" (keyup)="valuetwo($event)">
+<h2>{{displayAmt}}</h2>
+
+<button (click)="callObj()">Get Vehical Price</button>

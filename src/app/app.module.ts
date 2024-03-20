@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { ComponentthreeComponent } from './componentthree/componentthree.component';
 import { ViewchildoneComponent } from './viewchildone/viewchildone.component';
 import { ViewchildtwoComponent } from './viewchildtwo/viewchildtwo.component';
+import { SignaloneComponent } from './signalone/signalone.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +19,8 @@ import { ViewchildtwoComponent } from './viewchildtwo/viewchildtwo.component';
     ComponenttwoComponent,
     ComponentthreeComponent,
     ViewchildoneComponent,
-    ViewchildtwoComponent
+    ViewchildtwoComponent,
+    SignaloneComponent
   ],
   imports: [
     BrowserModule,
