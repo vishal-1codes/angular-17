@@ -8,13 +8,17 @@ import { ComponentoneComponent } from './componentone/componentone.component';
 import { ComponenttwoComponent } from './componenttwo/componenttwo.component';
 import { HttpClientModule } from '@angular/common/http';
 import { ComponentthreeComponent } from './componentthree/componentthree.component';
+import { ViewchildoneComponent } from './viewchildone/viewchildone.component';
+import { ViewchildtwoComponent } from './viewchildtwo/viewchildtwo.component';
 @NgModule({
   declarations: [
     AppComponent,
     ChidappComponent,
     ComponentoneComponent,
     ComponenttwoComponent,
-    ComponentthreeComponent
+    ComponentthreeComponent,
+    ViewchildoneComponent,
+    ViewchildtwoComponent
   ],
   imports: [
     BrowserModule,
