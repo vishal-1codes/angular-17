@@ -1,0 +1,29 @@
+<p>componentone works!</p>
+<!--replacement of ngIf-->
+<div *ngIf="logginIn;else notLoginUser">
+login user
+</div>
+<ng-template #notLoginUser>
+User not login
+</ng-template>
+
+<!--ngSwirch case alternative-->
+@switch (accessLevel) {
+    @case('admin'){
+        <p>Admin enter</p>
+    }
+    @case('emp'){
+        <p>emp enter</p>
+    }
+    @case('user'){
+        <p>user enter</p>
+    }
+}
+
+<!--ngFor alternative-->
+
+@for(user of users; track user){
+   <div (click)="getUserById(user)"> {{user.name}}</div>
+}@empty {
+    User Not Found
+}

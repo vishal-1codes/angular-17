@@ -1,0 +1,12 @@
+<p>componenttwo works!</p>
+<!-- @for (item of postsArray; track $index) {
+<p>{{item.title}}</p>
+}@empty{
+    <p>Data not get</p>
+} -->
+
+@for (item of postsArray; track item.id) {
+<app-componentthree [webinar]="item"></app-componentthree>
+}@empty {
+    <p>Data not found</p>
+}

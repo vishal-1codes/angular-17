@@ -1,0 +1,23 @@
+
+<button (click)="postParent()">CLick</button>
+<app-chidapp [parentData]="sendChild" (dataToParent)="receiveDataFromChild($event)"></app-chidapp>
+<p>{{fromChild}}</p>
+<router-outlet />
+
+<button routerLink="/component-one">GO TO One</button>
+<hr>
+<app-componentone></app-componentone>
+<hr>
+
+
+@defer (on viewport) {
+    <app-componenttwo></app-componenttwo>
+  } @loading {
+    Loading…
+  } @error {
+    Loading failed 
+  }  @placeholder {
+    <!-- A placeholder content to show until the comments load -->
+    <img src="../assets/download (2).png">
+}
+
