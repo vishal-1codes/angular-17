@@ -1,1 +1,12 @@
 <p>templateform works!</p>
+<form #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+    <div>
+        <label>Name:</label>
+        <input type="text" name="name" ngModel required>
+      </div>
+      <div>
+        <label>Email:</label>
+        <input type="email" name="email" ngModel required email>
+      </div>
+      <button type="submit">Submit</button>
+</form>
