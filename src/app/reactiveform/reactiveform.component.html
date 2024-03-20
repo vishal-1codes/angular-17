@@ -1,0 +1,15 @@
+<p>reactiveform works!</p>
+<form [formGroup]="newForm" (ngSubmit)="submitForm()">
+    <div>
+        <input formControlName="name" placeholder="Name">
+    </div>
+    <div formArrayName="items">
+        <div *ngFor="let item of items.controls; let i=index" [formGroupName]="i">
+          <input formControlName="name" placeholder="Name">
+          <input formControlName="quantity" placeholder="Quantity">
+          <button type="button" (click)="removeItem(i)">Remove</button>
+        </div>
+    </div>
+    <button type="button" (click)="addItem()">Add Item</button>
+    <button type="submit">Submit</button>
+</form>

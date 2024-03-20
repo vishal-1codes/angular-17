@@ -11,6 +11,9 @@ import { ComponentthreeComponent } from './componentthree/componentthree.compone
 import { ViewchildoneComponent } from './viewchildone/viewchildone.component';
 import { ViewchildtwoComponent } from './viewchildtwo/viewchildtwo.component';
 import { SignaloneComponent } from './signalone/signalone.component';
+import { ReactiveformComponent } from './reactiveform/reactiveform.component';
+import { TemplateformComponent } from './templateform/templateform.component';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,12 +23,16 @@ import { SignaloneComponent } from './signalone/signalone.component';
     ComponentthreeComponent,
     ViewchildoneComponent,
     ViewchildtwoComponent,
-    SignaloneComponent
+    SignaloneComponent,
+    ReactiveformComponent,
+    TemplateformComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
   providers: [
     provideClientHydration()
