@@ -7,6 +7,7 @@ import { ComponentthreeComponent } from './componentthree/componentthree.compone
 import { ViewchildoneComponent } from './viewchildone/viewchildone.component';
 import { ViewchildtwoComponent } from './viewchildtwo/viewchildtwo.component';
 import { SignaloneComponent } from './signalone/signalone.component';
+import { MethodsComponent } from './methods/methods.component';
 const routes: Routes = [
   {path:'childapp',component:ChidappComponent},
   {path:'component-one',component:ComponentoneComponent},
@@ -15,6 +16,7 @@ const routes: Routes = [
   {path:'viewchild-one',component:ViewchildoneComponent},
   {path:'viewchild-two',component:ViewchildtwoComponent},
   {path:'signal-one',component:SignaloneComponent},
+  {path:'methods',component:MethodsComponent},
 ];
 
 @NgModule({

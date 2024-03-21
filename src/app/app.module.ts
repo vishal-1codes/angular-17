@@ -14,6 +14,7 @@ import { SignaloneComponent } from './signalone/signalone.component';
 import { ReactiveformComponent } from './reactiveform/reactiveform.component';
 import { TemplateformComponent } from './templateform/templateform.component';
 import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+import { MethodsComponent } from './methods/methods.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -25,7 +26,8 @@ import { FormsModule,ReactiveFormsModule } from '@angular/forms';
     ViewchildtwoComponent,
     SignaloneComponent,
     ReactiveformComponent,
-    TemplateformComponent
+    TemplateformComponent,
+    MethodsComponent
   ],
   imports: [
     BrowserModule,
