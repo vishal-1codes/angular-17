@@ -1,6 +1,4 @@
-
-
-name: CI/CD for angular-17 
+name: CI/CD for Angular 17
 
 on:
   push:
@@ -8,49 +6,41 @@ on:
       - main
 
 jobs:
-  # Build Job
   build:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout Code
+      - name: Checkout repository
         uses: actions/checkout@v3
 
-      - name: Install Node
+      - name: Setup Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: 18.x
+          node-version: 18
 
-      - name: Install Dependencies
-        run: |
-          cd angular-17
-          npm install
+      - name: Install dependencies
+        run: npm install
 
-      - name: Build Project
-        run: |
-          cd angular-17
-          npm run angular-17
+      - name: Build Angular project
+        run: npm run build -- --configuration production
 
-      - name: Upload artifact to enable deployment
+      - name: Upload build artifact
         uses: actions/upload-artifact@v3
         with:
-          name: poduction file
-          path: ./angular-17/build
+          name: angular-build
+          path: dist/docker-app-new
 
-  # Deploy Job
   deploy:
-   
     needs: build
-    
     runs-on: ubuntu-latest
     steps:
-      - name: Download artifact
+      - name: Download build artifact
         uses: actions/download-artifact@v3
         with:
-          name: poduction file
-          path: ./angular-17/build
+          name: angular-build
+          path: dist/docker-app-new
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
-          github_token: ${{ secrets.KEY }} #this is the key of the access token
-          publish_dir: ./angular-17/build
+          github_token: ${{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}}
+          publish_dir: dist/docker-app-new
